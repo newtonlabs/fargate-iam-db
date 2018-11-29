@@ -8,9 +8,9 @@ const TIMEOUT = 1500;
 const app = express();
 
 const config = {
-    region: 'us-east-1',
-    username: 'workload',
-    hostname: 'newton-aurora-cluster.cluster-cvztikpkk8gq.us-east-1.rds.amazonaws.com',
+    region: process.env.REGION,
+    username: process.env.DATABASE_USER,
+    hostname: process.env.DATABASE_HOST,
     port: 3306,
     database: 'workloads_test',
     ssl: 'Amazon RDS'
