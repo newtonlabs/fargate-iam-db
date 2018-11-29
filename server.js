@@ -23,13 +23,6 @@ db.getConnection(config).then(con => {
         console.log("Connected!");
     });
 
-    console.log('query now');
-
-    con.query('SELECT * FROM pet', function (err, rows) {
-        if (err) throw err;
-        console.log(rows);
-    })
-
     global.db = con;
 });
 

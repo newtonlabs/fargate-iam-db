@@ -16,7 +16,6 @@ function getToken(config) {
 // TODO: What about local development?
 async function getConnection(config) {
     let token = await getToken(config);
-    console.log('connecting with: ', token);
 
     let con = mysql.createConnection({
         host: config.hostname,
